@@ -15,13 +15,17 @@ let package = Package (
     targets: [
 		.binaryTarget(name: "CovantexSDK",
 					  path: "./Sources/CovantexSDK.xcframework.zip")
-
+//		.binaryTarget(
+//			name: "CovantexSDK",
+//			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/1.0.3/CovantexSDK.xcframework.zip",
+//			checksum: "7c3d745735f4155660c79ba457c7bce13362795ce8b03808a56ec0a5a8e15742"
+//		)
 //		.binaryTarget(name: "CovantexSDK",
 //					  path: "./Sources/CovantexSDK.xcframework")
 //		.binaryTarget(
 //			name: "CovantexSDK",
 //			url: "https://dl.google.com/firebase/ios/swiftpm/8.15.0/CovantexSDK.zip",
-//			checksum: "54a730e20d435c6aeec4a2bb91741f6a428a3cebcba89e9c0d2bc1a8dcbb0ffd"
+//			checksum: "7c3d745735f4155660c79ba457c7bce13362795ce8b03808a56ec0a5a8e15742"
 //		)
     ]
 )
