@@ -10,12 +10,19 @@ let package = Package (
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CovantexSDK",
+			type: .dynamic,
             targets: ["CovantexSDK"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
 		.binaryTarget(name: "CovantexSDK",
-					  path: "CovantexSDK.xcframework")
+					  path: "./Sources/CovantexSDK.xcframework.zip")
+
+//		.binaryTarget(name: "CovantexSDK",
+//					  path: "./Sources/CovantexSDK.xcframework")
+//		.binaryTarget(
+//			name: "CovantexSDK",
+//			url: "https://dl.google.com/firebase/ios/swiftpm/8.15.0/CovantexSDK.zip",
+//			checksum: "54a730e20d435c6aeec4a2bb91741f6a428a3cebcba89e9c0d2bc1a8dcbb0ffd"
+//		)
     ]
 )
