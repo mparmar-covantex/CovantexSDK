@@ -10,22 +10,24 @@ let package = Package (
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CovantexSDK",
-            targets: ["CovantexSDK"]),
+            targets: ["CovantexFrameworkWrapper"]),
     ],
     targets: [
 //		.binaryTarget(name: "CovantexSDK",
 //					  path: "./Sources/CovantexSDK.xcframework.zip")
+		.target(
+			name: "CovantexFrameworkWrapper",
+			dependencies: [
+				"CovantexSDK",
+			],
+			path: "CovantexFrameworkWrapper"
+		),
 		.binaryTarget(
 			name: "CovantexSDK",
-			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.6/CovantexSDK.xcframework.zip",
-			checksum: "7c3d745735f4155660c79ba457c7bce13362795ce8b03808a56ec0a5a8e15742"
+			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.7/CovantexSDK.xcframework.zip",
+			checksum: "97a7a4c494d9c084c222fe1e67821c62e5786fe1b9ac2d7b10c5ccbe5534e08b"
 		)
 //		.binaryTarget(name: "CovantexSDK",
 //					  path: "./Sources/CovantexSDK.xcframework")
-//		.binaryTarget(
-//			name: "CovantexSDK",
-//			url: "https://dl.google.com/firebase/ios/swiftpm/8.15.0/CovantexSDK.zip",
-//			checksum: "7c3d745735f4155660c79ba457c7bce13362795ce8b03808a56ec0a5a8e15742"
-//		)
     ]
 )
