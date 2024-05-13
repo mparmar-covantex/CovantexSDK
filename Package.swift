@@ -18,7 +18,7 @@ let package = Package(
 		.package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
 		.package(url: "https://github.com/mparmar-covantex/ObjectMapper.git", .upToNextMajor(from: "4.4.0")),
 		.package(url: "https://github.com/parmar-mehul/KeychainAccess", .upToNextMajor(from: "1.0.2")),
-		.package(url: "https://github.com/parmar-mehul/Mute", .upToNextMajor(from: "1.0.9"))
+		.package(url: "https://github.com/mparmar-covantex/Mute", .upToNextMajor(from: "1.0.15"))
 	],
 	targets: [
 		.target(
