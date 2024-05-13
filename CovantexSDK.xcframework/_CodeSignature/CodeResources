@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/CovantexSDK.framework/CovantexSDK</key>
 		<data>
-		WMy3JLwUtamqLkG9qcRSap47m8k=
+		guEXzs7LVvBM2tLGExeQiJ6ajgg=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/CovantexSDK</key>
 		<data>
-		2oXOR5Gn6ALTW7iFonWCQscuFa8=
+		AY54RMysPIz1xttfkp4/Ls4/wwk=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Headers/CovantexSDK-Swift.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/CovantexSDK</key>
 		<data>
-		Z3uQeQRbUcLpxIAhiaE1IuMCD/0=
+		9JETemGED+Kno5jufSwltclqnqU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<data>
@@ -187,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WMy3JLwUtamqLkG9qcRSap47m8k=
+			guEXzs7LVvBM2tLGExeQiJ6ajgg=
 			</data>
 			<key>hash2</key>
 			<data>
-			d6rjAie14NYd2xDc75LXBJjpZQM3kXY5rtZSAN3j1hE=
+			4zgmomtaTkN899MtG46nXM6pv0RODeASAW8ULEpAjEo=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
@@ -339,11 +339,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2oXOR5Gn6ALTW7iFonWCQscuFa8=
+			AY54RMysPIz1xttfkp4/Ls4/wwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			stUUoxx0OtGo1Su3sIpYx1MZk1S+IFQY9hkk/Wn47UY=
+			ZSNnmvqnMEZ9o3gsZuWYC9S4ljjHhQiBzxymfCvI6Ew=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Headers/CovantexSDK-Swift.h</key>
@@ -520,11 +520,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z3uQeQRbUcLpxIAhiaE1IuMCD/0=
+			9JETemGED+Kno5jufSwltclqnqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			8oHUoI42jBVn5GkQYdsZRg5HKtSV9dmH8B+aoXp52Rg=
+			PkhdM09hMvQXOOnQYugZSSvL+087RtzpbiT2cxRrjPc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
