@@ -33,11 +33,12 @@ let package = Package(
 			],
 			path: "CovantexFrameworkWrapper"
 		),
-		.binaryTarget(
-			name: "CovantexSDK",
-			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.14/CovantexSDK.xcframework.zip",
-			checksum: "e286544525df38d33006b4ffde3edceeb89c23f2c1d638da3d32209fda03af30"
-		)
+		.binaryTarget(name: "CovantexSDK", path: "CovantexSDK.xcframework")
+//		.binaryTarget(
+//			name: "CovantexSDK",
+//			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.14/CovantexSDK.xcframework.zip",
+//			checksum: "e286544525df38d33006b4ffde3edceeb89c23f2c1d638da3d32209fda03af30"
+//		)
 	]
 )
 
