@@ -1,9 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.10
 
 import PackageDescription
 
 let package = Package(
 	name: "CovantexSDK",
+	defaultLocalization: "en",
 	products: [
 		.library(
 			name: "CovantexSDK",
@@ -12,8 +13,8 @@ let package = Package(
 	targets: [
 		.binaryTarget(
 			name: "CovantexSDK",
-			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.11/CovantexSDK.xcframework.zip",
-			checksum: "bfbe4702387fb9bbadb939eef604c84b8320357c7a691cbf807004da80b9ca03"
+			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.12/CovantexSDK.xcframework.zip",
+			checksum: "e286544525df38d33006b4ffde3edceeb89c23f2c1d638da3d32209fda03af30"
 		)
 	]
 )
