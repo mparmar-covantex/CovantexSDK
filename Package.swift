@@ -4,22 +4,37 @@
 import PackageDescription
 
 let package = Package (
-    name: "CovantexSDK",
+	name: "CovantexSDK",
 	defaultLocalization: "en",
 	platforms: [
-		.iOS(.v13), .macOS(.v13)
+		.iOS(.v13)
 	],
-    products: [
-		.library(name: "CovantexSDK",targets: ["CovantexSDK", "CovantexSDKStub"]),
-    ],
-    targets: [
-//		.binaryTarget(name: "CovantexSDK", path: "./Sources/CovantexSDK.xcframework")
-//		.binaryTarget(name: "CovantexSDK",path: "./Sources/CovantexSDK.xcframework.zip")
-		.target(name: "CovantexSDKStub"),
-		.binaryTarget(
-			name: "CovantexSDK",
-			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.8/CovantexSDK.xcframework.zip",
-			checksum: "97a7a4c494d9c084c222fe1e67821c62e5786fe1b9ac2d7b10c5ccbe5534e08b"
-		)
-    ]
+	products: [
+		.library(name: "CovantexSDK" ,targets: ["CovantexSDK"]),
+	],
+	targets: [
+		.binaryTarget(name: "CovantexSDK", path: "CovantexSDK.xcframework"),
+	]
 )
+
+
+//let package = Package (
+//    name: "CovantexSDKs",
+//	defaultLocalization: "en",
+//	platforms: [
+//		.iOS(.v13)
+//	],
+//    products: [
+//		.library(name: "CovantexSDKs", type: .dynamic ,targets: ["CovantexSDKs", "CovantexSDKStub"]),
+//    ],
+//    targets: [
+//		.binaryTarget(name: "CovantexSDK", path: "../CovantexSDK.xcframework"),
+////		.binaryTarget(name: "CovantexSDK",path: "./Sources/CovantexSDK.xcframework.zip")
+//		.target(name: "CovantexSDKStub"),
+////		.binaryTarget(
+////			name: "CovantexSDKs",
+////			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.8/CovantexSDK.xcframework.zip",
+////			checksum: "97a7a4c494d9c084c222fe1e67821c62e5786fe1b9ac2d7b10c5ccbe5534e08b"
+////		)
+//    ]
+//)
