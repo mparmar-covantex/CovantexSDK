@@ -1,3 +1,24 @@
+// swift-tools-version:5.3
+
+import PackageDescription
+
+let package = Package(
+	name: "CovantexSDK",
+	products: [
+		.library(
+			name: "CovantexSDK",
+			targets: ["CovantexSDK"])
+	],
+	targets: [
+		.binaryTarget(
+			name: "CovantexSDK",
+			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.11/CovantexSDK.xcframework.zip",
+			checksum: "bfbe4702387fb9bbadb939eef604c84b8320357c7a691cbf807004da80b9ca03"
+		)
+	]
+)
+
+/*
 // swift-tools-version: 5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
@@ -10,13 +31,17 @@ let package = Package (
 		.iOS(.v13)
 	],
 	products: [
-		.library(name: "CovantexSDK" ,targets: ["CovantexSDK"]),
+		.library(name: "CovantexSDK", targets: ["CovantexSDK"]),
 	],
 	targets: [
-		.binaryTarget(name: "CovantexSDK", path: "CovantexSDK.xcframework"),
+		.binaryTarget(
+			name: "CovantexSDK",
+			url: "https://github.com/mparmar-covantex/CovantexSDK/releases/download/1.0.11/CovantexSDK.xcframework.zip",
+			checksum: "bfbe4702387fb9bbadb939eef604c84b8320357c7a691cbf807004da80b9ca03"
+		)
 	]
 )
-
+*/
 
 //let package = Package (
 //    name: "CovantexSDKs",
