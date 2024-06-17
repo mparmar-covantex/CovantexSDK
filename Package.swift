@@ -11,14 +11,14 @@ let package = Package(
 	products: [
 		.library(
 			name: "CovantexSDK",
+			type: .static,
 			targets: ["CovantexSDK", "CovantexFrameworkWrapper"])
 	],
 	dependencies: [
 		.package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.0")),
 		.package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
-		.package(url: "https://github.com/mparmar-covantex/ObjectMapper.git", .upToNextMajor(from: "4.4.0")),
+		.package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.4.3")),
 		.package(url: "https://github.com/parmar-mehul/KeychainAccess", .upToNextMajor(from: "1.0.2")),
-		.package(url: "https://github.com/mparmar-covantex/Mute", .upToNextMajor(from: "1.0.23"))
 	],
 	targets: [
 		.target(
@@ -29,7 +29,6 @@ let package = Package(
 				"ObjectMapper",
 				"SwiftyJSON",
 				"KeychainAccess",
-				"Mute"
 			],
 			path: "CovantexFrameworkWrapper"
 		),

@@ -6,31 +6,31 @@
 	<dict>
 		<key>ios-arm64/CovantexSDK.framework/CovantexSDK</key>
 		<data>
-		guEXzs7LVvBM2tLGExeQiJ6ajgg=
+		p/k0Nf4a01BNYFYNNxrQv132aTM=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<data>
-		3bQC8iXw6QiH+VrvAOWFgKZzj3U=
+		Syp7ZP5OFyH6AOPd3N7yjHZYZ5I=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Info.plist</key>
 		<data>
-		fnHovSJhpbERQvuLT/EK+HGmGrE=
+		6Lh02e+NO0kYrGgS7UoTTgTJY94=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		G1hKDbwDVHIO7pvq0dJo369Z5YU=
+		JZY2uBx5Tq/YXMJ/W8mqSrfvQIA=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		WBkt+uaXkpve9BNsZ2H5W5KUShc=
+		Ls+vLf81dsa1Vb/IkLXGzS3bl/g=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		IqmtIFcOsoUkOYeH0jeI1IIz/mY=
+		+XbehQ9g3NCOnYc/5pj4VTa0jYI=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		WBkt+uaXkpve9BNsZ2H5W5KUShc=
+		Ls+vLf81dsa1Vb/IkLXGzS3bl/g=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/AppWebView.nib</key>
 		<data>
-		tcnHQZWb+o8iIHi0kmE2fnu+Nx4=
+		YEjBlIeGncOIRoOkBW4xN2e4ICE=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/Info.plist</key>
 		<data>
@@ -46,55 +46,55 @@
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/UINavigationController-1Fa-Ea-cAz.nib</key>
 		<data>
-		7yhimdjwSf9N/tAM7V4mcil3nDc=
+		Q9plPcQGSxagkC/0+PIOdK12mTc=
 		</data>
 		<key>ios-arm64/CovantexSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		0QMPU0KdxQVAu2aypcN6O79bP/Q=
+		N7tkR1UfMNJEKZbSABzcSI5Vtrc=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/CovantexSDK</key>
 		<data>
-		AY54RMysPIz1xttfkp4/Ls4/wwk=
+		OZaZhgEP18+7hnD6B6A5nbMmRuQ=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Headers/CovantexSDK-Swift.h</key>
 		<data>
-		vhOHe7aO99K7QIeOkXd0FcceBQc=
+		xtouIaYWwsV0y63j7ZE3a0m4QA0=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
 		<data>
-		vPjGKA3BrqregboRMp3gCbwxJ1M=
+		euNZxfV65DDshYeiiaM0o8BiYZM=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
 		<data>
-		t5xe1uxgFHkCcdyPHVUF6EngFc0=
+		BJdGQUmz1WJGEQLRGJDHMe3eZ+Q=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<data>
-		84LOOxA2hwkl5rw8gxN0OHo4znI=
+		DczTozeE50/3p1S5VQaq21c2GZ0=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<data>
-		t5xe1uxgFHkCcdyPHVUF6EngFc0=
+		BJdGQUmz1WJGEQLRGJDHMe3eZ+Q=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
 		<data>
-		vPjGKA3BrqregboRMp3gCbwxJ1M=
+		euNZxfV65DDshYeiiaM0o8BiYZM=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
 		<data>
-		VnZBAcm7uqabgblvIzkJNGE2JcY=
+		0CzHcMRhvqJ25Y+bGnz8vaGth2w=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<data>
-		CDsFr216/chnjpe/q+AMmsvaLvo=
+		YIPktnO5qhzRDxL9PrmpHJGHTfY=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<data>
-		VnZBAcm7uqabgblvIzkJNGE2JcY=
+		0CzHcMRhvqJ25Y+bGnz8vaGth2w=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Info.plist</key>
 		<data>
-		JqBkZOU1V1PumTneaZfHxM9DkZk=
+		h3smBKIx218mL/oiMcq+mplFwWA=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/AppWebView.nib</key>
 		<data>
-		gygWeqYc7bVx9/Ow0itMStilHFA=
+		iIDOCK3jhUkIDNnfP2yctNK/asI=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/Info.plist</key>
 		<data>
@@ -110,55 +110,55 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/UINavigationController-1Fa-Ea-cAz.nib</key>
 		<data>
-		ySONVdOzCM8ujIxIow4FJEXSRec=
+		1sqrXx/ZrHnQO6gBLJOJJsQqx58=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/_CodeSignature/CodeResources</key>
 		<data>
-		LFLk2Y9qzI81FIkUV1Or/mO1Qh8=
+		JaJ+Hme6os6OPNXiBhOh8/Mlrm4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/CovantexSDK</key>
 		<data>
-		9JETemGED+Kno5jufSwltclqnqU=
+		92RS6oLycDRedp1kV075gMg2TZs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<data>
-		vhOHe7aO99K7QIeOkXd0FcceBQc=
+		xtouIaYWwsV0y63j7ZE3a0m4QA0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Info.plist</key>
 		<data>
-		jRyjSnqCY4fZH5wguObBruqAOx0=
+		klEItXfhMsmGa5CYE6w2EdFHSE0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		KEwh76PoSv4z/AFEU4XHejJ8qMs=
+		61VT+t9Kv2Ixp7q7TsTdWHWwsZs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2tlvFPaZKHSfI/d9ytHe7/ZfLIc=
+		oepB7PI/QAaZiYBGfg/QiWWUYUQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		76C8QuMrIS6iS6IJyjnwmlMovyQ=
+		FFROzZJoJWKHIbt+cCd9RprqRl0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2tlvFPaZKHSfI/d9ytHe7/ZfLIc=
+		oepB7PI/QAaZiYBGfg/QiWWUYUQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		KEwh76PoSv4z/AFEU4XHejJ8qMs=
+		61VT+t9Kv2Ixp7q7TsTdWHWwsZs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FEwyGmq9BGNby9H+F6kaQeyGOyU=
+		lk2853sHXYsp6pArKfA9yFrj308=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ifI8zD0qIdO1di5WShEwI71YVZk=
+		t69+BlQgbTdlapr7/CUdApegBnE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FEwyGmq9BGNby9H+F6kaQeyGOyU=
+		lk2853sHXYsp6pArKfA9yFrj308=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/AppWebView.nib</key>
 		<data>
-		tcnHQZWb+o8iIHi0kmE2fnu+Nx4=
+		YEjBlIeGncOIRoOkBW4xN2e4ICE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/Info.plist</key>
 		<data>
@@ -174,11 +174,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/UINavigationController-1Fa-Ea-cAz.nib</key>
 		<data>
-		7yhimdjwSf9N/tAM7V4mcil3nDc=
+		Q9plPcQGSxagkC/0+PIOdK12mTc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		IzqKRWlYUuk59U3LRjBW4ZyXazs=
+		Gr9Z9nSw8p9rnAoZw/s2+NHJRnY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -187,77 +187,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			guEXzs7LVvBM2tLGExeQiJ6ajgg=
+			p/k0Nf4a01BNYFYNNxrQv132aTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			4zgmomtaTkN899MtG46nXM6pv0RODeASAW8ULEpAjEo=
+			P4r09Nkk3w+259qJovwz2Du7PGOsjxlcyaSGKEdfyhY=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3bQC8iXw6QiH+VrvAOWFgKZzj3U=
+			Syp7ZP5OFyH6AOPd3N7yjHZYZ5I=
 			</data>
 			<key>hash2</key>
 			<data>
-			2CkDJ7sSlAb7f2WaqpLh/LgVk5pu0B+TTo+Ky+fV80s=
+			I/cqySCui1q4vL4Zj98ofAH/L0yYRnzrhHgfl0QVo/8=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fnHovSJhpbERQvuLT/EK+HGmGrE=
+			6Lh02e+NO0kYrGgS7UoTTgTJY94=
 			</data>
 			<key>hash2</key>
 			<data>
-			LGUvjC6Q2Ay7EO9MRD8zKSo3PRBGxW6E2B+9tXJS3sk=
+			o1Fyp5ND6RHZrP8Y9b1tFNcQ8ecGAyQKy/EnBgDgGMg=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G1hKDbwDVHIO7pvq0dJo369Z5YU=
+			JZY2uBx5Tq/YXMJ/W8mqSrfvQIA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YquwceR60mIJ4qi8CaHG6q+v/CQASBrG0Xfg7bGZn2o=
+			dyn8qWQs5KtppW7Bw7wkLg6CjCXr27IFBL+5BTsRx0w=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WBkt+uaXkpve9BNsZ2H5W5KUShc=
+			Ls+vLf81dsa1Vb/IkLXGzS3bl/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			hULDVp+q8WcGmkZBwCAZsJDuTYmmS/F8AReSFOdkcMk=
+			PSM0hPhTLL4rK+2M9gIoGj9SAaODKEV+qtm7DpqhEX4=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IqmtIFcOsoUkOYeH0jeI1IIz/mY=
+			+XbehQ9g3NCOnYc/5pj4VTa0jYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			gXT2fpgAHtAWh7T224P0BMFlEtFpwcj2ELAUCRMhCBE=
+			bOt3P9iCsNSSxMspq19+zii12w9kHl1/Z8lFlf8WO10=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WBkt+uaXkpve9BNsZ2H5W5KUShc=
+			Ls+vLf81dsa1Vb/IkLXGzS3bl/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			hULDVp+q8WcGmkZBwCAZsJDuTYmmS/F8AReSFOdkcMk=
+			PSM0hPhTLL4rK+2M9gIoGj9SAaODKEV+qtm7DpqhEX4=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
@@ -275,11 +275,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tcnHQZWb+o8iIHi0kmE2fnu+Nx4=
+			YEjBlIeGncOIRoOkBW4xN2e4ICE=
 			</data>
 			<key>hash2</key>
 			<data>
-			U11nuB9VPsKJHIlfe8Ei1AXOpHCZO5x6sep/D7FOybQ=
+			g7+JS3dCGRlnT2kaU/w/4Jh0/lOmqAKBhhMxW/AqLYk=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/Payment.storyboardc/Info.plist</key>
@@ -297,22 +297,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7yhimdjwSf9N/tAM7V4mcil3nDc=
+			Q9plPcQGSxagkC/0+PIOdK12mTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rdE0BvftLW+ZZHLP1grevU1nWqGDOSLEFDUvmSkHubc=
+			94JrDKovJrTOinfuVsvZGB08RSJCthxPbu1OAPSkA40=
 			</data>
 		</dict>
 		<key>ios-arm64/CovantexSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0QMPU0KdxQVAu2aypcN6O79bP/Q=
+			N7tkR1UfMNJEKZbSABzcSI5Vtrc=
 			</data>
 			<key>hash2</key>
 			<data>
-			PqyAxyjxLNlxkCGlZ7scwfPLtdWynCGVTgy9i248eF0=
+			ddtaeTrsR2XlNubyLVsX7fHc3zrYNTtfrBxMbrJGJzQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/CovantexSDK</key>
@@ -339,121 +339,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AY54RMysPIz1xttfkp4/Ls4/wwk=
+			OZaZhgEP18+7hnD6B6A5nbMmRuQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZSNnmvqnMEZ9o3gsZuWYC9S4ljjHhQiBzxymfCvI6Ew=
+			SNTpk9mKxW7DUbFXvggP55DXOXm1tVknIowK73ez2pU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Headers/CovantexSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vhOHe7aO99K7QIeOkXd0FcceBQc=
+			xtouIaYWwsV0y63j7ZE3a0m4QA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ndUPdvvqFpUHMGEJErZinlUzYr4rjHhNHu7rkCRBdEE=
+			ur+wgzxS3mSdYq8eezu08aGil9EVoF5TLP2930WVUdw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vPjGKA3BrqregboRMp3gCbwxJ1M=
+			euNZxfV65DDshYeiiaM0o8BiYZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jh2irpOxPqyIwaaBVFwFkHCbdA1nPRtRBGcnEWP4kss=
+			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t5xe1uxgFHkCcdyPHVUF6EngFc0=
+			BJdGQUmz1WJGEQLRGJDHMe3eZ+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			gDXlJZeCtNAvzjaUi3ii86GallFerl82zwPemzfKVMk=
+			5/CjZXPYgrHHXo9By41UL+Xt9nwAjPhKcyiHr3CVMXg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			84LOOxA2hwkl5rw8gxN0OHo4znI=
+			DczTozeE50/3p1S5VQaq21c2GZ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Od6S6stiztG+HEgKhmmXQrFXdWIfbJG1FamZtPbN6e0=
+			wwQAN78Ix8wAdJAVjgQVnPv8yGBSPAQCpIRhNxft1gI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t5xe1uxgFHkCcdyPHVUF6EngFc0=
+			BJdGQUmz1WJGEQLRGJDHMe3eZ+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			gDXlJZeCtNAvzjaUi3ii86GallFerl82zwPemzfKVMk=
+			5/CjZXPYgrHHXo9By41UL+Xt9nwAjPhKcyiHr3CVMXg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vPjGKA3BrqregboRMp3gCbwxJ1M=
+			euNZxfV65DDshYeiiaM0o8BiYZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jh2irpOxPqyIwaaBVFwFkHCbdA1nPRtRBGcnEWP4kss=
+			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VnZBAcm7uqabgblvIzkJNGE2JcY=
+			0CzHcMRhvqJ25Y+bGnz8vaGth2w=
 			</data>
 			<key>hash2</key>
 			<data>
-			1mgAqs8TUZSLz/2XA9jSHNChMQ60K8wedJtdZgR1+nQ=
+			01N+AZP/k5q6J/G1FpWOxUbXRgmcTfsIBAxY8ztDE+w=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CDsFr216/chnjpe/q+AMmsvaLvo=
+			YIPktnO5qhzRDxL9PrmpHJGHTfY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Qppyt85l+GSr/nDzX1zoX5FDeigE8QywcCJURhkCt4=
+			iZE0AcGXX92+8GrzzGOGNsD5R/AvtOUW7lUJu+fpkNY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VnZBAcm7uqabgblvIzkJNGE2JcY=
+			0CzHcMRhvqJ25Y+bGnz8vaGth2w=
 			</data>
 			<key>hash2</key>
 			<data>
-			1mgAqs8TUZSLz/2XA9jSHNChMQ60K8wedJtdZgR1+nQ=
+			01N+AZP/k5q6J/G1FpWOxUbXRgmcTfsIBAxY8ztDE+w=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JqBkZOU1V1PumTneaZfHxM9DkZk=
+			h3smBKIx218mL/oiMcq+mplFwWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			hbI5oVmcBwp48PNjJOHtGLOmudofyhR6pDGkNpnqs+M=
+			aT6T2oHKqhMX5S1akRyH0BQqMKtAWYKmRNjXH/m6f2c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
@@ -471,11 +471,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gygWeqYc7bVx9/Ow0itMStilHFA=
+			iIDOCK3jhUkIDNnfP2yctNK/asI=
 			</data>
 			<key>hash2</key>
 			<data>
-			BiwXLkyvuRiwHH4C8XAKIV+CmtoGfK5u5j0ycwu3LS8=
+			4k7NXqyzl89hq/YGQIHrcdRBo2UgUKB9tt95wDSieVY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/Resources/Payment.storyboardc/Info.plist</key>
@@ -493,22 +493,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ySONVdOzCM8ujIxIow4FJEXSRec=
+			1sqrXx/ZrHnQO6gBLJOJJsQqx58=
 			</data>
 			<key>hash2</key>
 			<data>
-			W5jhDY6+c2+pvaF+YhrMc6KJnYiL2QECX9zwgD+cxIA=
+			qu5XjhkNthaoZwrEaYPpQ6CzTrUN+fMax4wX9R6ijk0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/A/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LFLk2Y9qzI81FIkUV1Or/mO1Qh8=
+			JaJ+Hme6os6OPNXiBhOh8/Mlrm4=
 			</data>
 			<key>hash2</key>
 			<data>
-			jQT3c+UO6OMUfY8evtvCeBnuICCwVU64i8bl/PpsrhM=
+			tDvV+Q++73a7asaixQvMbEJKed7rXcV3OIbzvHdlNwI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/CovantexSDK.framework/Versions/Current</key>
@@ -520,121 +520,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9JETemGED+Kno5jufSwltclqnqU=
+			92RS6oLycDRedp1kV075gMg2TZs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PkhdM09hMvQXOOnQYugZSSvL+087RtzpbiT2cxRrjPc=
+			nYyx6uMnzXw/6oF/aI5jpwWDwId5U9E03LEst+7zjPE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Headers/CovantexSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vhOHe7aO99K7QIeOkXd0FcceBQc=
+			xtouIaYWwsV0y63j7ZE3a0m4QA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ndUPdvvqFpUHMGEJErZinlUzYr4rjHhNHu7rkCRBdEE=
+			ur+wgzxS3mSdYq8eezu08aGil9EVoF5TLP2930WVUdw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jRyjSnqCY4fZH5wguObBruqAOx0=
+			klEItXfhMsmGa5CYE6w2EdFHSE0=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Ss5h2yHQt1oMm0aEmPTKOZa71cbg0EBm192QY22Juo=
+			JczlLfTIESmQv3daFEPKdZieDbuIlczfTtaRuUnxBnE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KEwh76PoSv4z/AFEU4XHejJ8qMs=
+			61VT+t9Kv2Ixp7q7TsTdWHWwsZs=
 			</data>
 			<key>hash2</key>
 			<data>
-			v8dXPFmkesFwKCLSN1AaLpaQH//tH1SQGD5FG65IHjo=
+			ZkKLVcge1Zkq4Fpd9JF1/5i4rFx7jLRS36F5kkfhL40=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2tlvFPaZKHSfI/d9ytHe7/ZfLIc=
+			oepB7PI/QAaZiYBGfg/QiWWUYUQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ubT5AnuyY9mGjBDvyB9ahycoAfyfGbmQ5P8mLeyZkeo=
+			n5CE0Bliv3//z8199VQtZtTLSmyE5oJWjLyEA8fi0xU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			76C8QuMrIS6iS6IJyjnwmlMovyQ=
+			FFROzZJoJWKHIbt+cCd9RprqRl0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GTMAx7JnTpjPkebvtkbEhaMol4q0fZoJyNDNkaWdfFg=
+			Kt3iaLCWnQWoXvjVB1MT3NoxMA/OFsimtN1bGud4grM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2tlvFPaZKHSfI/d9ytHe7/ZfLIc=
+			oepB7PI/QAaZiYBGfg/QiWWUYUQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ubT5AnuyY9mGjBDvyB9ahycoAfyfGbmQ5P8mLeyZkeo=
+			n5CE0Bliv3//z8199VQtZtTLSmyE5oJWjLyEA8fi0xU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KEwh76PoSv4z/AFEU4XHejJ8qMs=
+			61VT+t9Kv2Ixp7q7TsTdWHWwsZs=
 			</data>
 			<key>hash2</key>
 			<data>
-			v8dXPFmkesFwKCLSN1AaLpaQH//tH1SQGD5FG65IHjo=
+			ZkKLVcge1Zkq4Fpd9JF1/5i4rFx7jLRS36F5kkfhL40=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FEwyGmq9BGNby9H+F6kaQeyGOyU=
+			lk2853sHXYsp6pArKfA9yFrj308=
 			</data>
 			<key>hash2</key>
 			<data>
-			/aDM49x4Gczlyku/T8hzZjlYZfbYR1XZ5Ndk6kBajBk=
+			GsUBFHj8SGxfn6Fzya3jZBguoFlBsxkSfEezYoueEKw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ifI8zD0qIdO1di5WShEwI71YVZk=
+			t69+BlQgbTdlapr7/CUdApegBnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			jaKS3MGSgI91iUrecLjyk5K9x0iQmUS0nMDA9FGrL+8=
+			7Kphm4sAfNq3hZjRA1SIARzb5SeLyUbMV6FQNle1tOE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FEwyGmq9BGNby9H+F6kaQeyGOyU=
+			lk2853sHXYsp6pArKfA9yFrj308=
 			</data>
 			<key>hash2</key>
 			<data>
-			/aDM49x4Gczlyku/T8hzZjlYZfbYR1XZ5Ndk6kBajBk=
+			GsUBFHj8SGxfn6Fzya3jZBguoFlBsxkSfEezYoueEKw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
@@ -652,11 +652,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tcnHQZWb+o8iIHi0kmE2fnu+Nx4=
+			YEjBlIeGncOIRoOkBW4xN2e4ICE=
 			</data>
 			<key>hash2</key>
 			<data>
-			U11nuB9VPsKJHIlfe8Ei1AXOpHCZO5x6sep/D7FOybQ=
+			g7+JS3dCGRlnT2kaU/w/4Jh0/lOmqAKBhhMxW/AqLYk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/Payment.storyboardc/Info.plist</key>
@@ -674,22 +674,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7yhimdjwSf9N/tAM7V4mcil3nDc=
+			Q9plPcQGSxagkC/0+PIOdK12mTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rdE0BvftLW+ZZHLP1grevU1nWqGDOSLEFDUvmSkHubc=
+			94JrDKovJrTOinfuVsvZGB08RSJCthxPbu1OAPSkA40=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CovantexSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IzqKRWlYUuk59U3LRjBW4ZyXazs=
+			Gr9Z9nSw8p9rnAoZw/s2+NHJRnY=
 			</data>
 			<key>hash2</key>
 			<data>
-			qNmeO/YU8dUd31tVxhe0XcS49RWF8SZtTJPjZqqB9T4=
+			auwevu0cKg3hu6a+X+8m6jzuNA7jcppfABgAx1pGSd0=
 			</data>
 		</dict>
 	</dict>

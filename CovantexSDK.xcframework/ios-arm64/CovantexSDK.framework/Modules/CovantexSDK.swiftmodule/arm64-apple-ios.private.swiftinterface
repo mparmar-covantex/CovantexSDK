@@ -4,9 +4,9 @@
 import AVFAudio
 import AVFoundation
 import Alamofire
+import AudioToolbox
 import Foundation
 import KeychainAccess
-import Mute
 import ObjectMapper
 import Swift
 import SwiftyJSON
@@ -405,6 +405,29 @@ public struct ErrorDto : ObjectMapper.Mappable {
   public var message: Swift.String?
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
+}
+public class UIDeviceMute {
+  public static let shared: CovantexSDK.UIDeviceMute
+  public typealias MuteNotificationCompletion = ((_ mute: Swift.Bool) -> Swift.Void)
+  public var alwaysNotify: Swift.Bool
+  public var notify: CovantexSDK.UIDeviceMute.MuteNotificationCompletion?
+  public var isPlaying: Swift.Bool {
+    get
+  }
+  public var isMute: Swift.Bool {
+    get
+  }
+  public var isPaused: Swift.Bool {
+    get
+    set
+  }
+  public var checkInterval: Swift.Double {
+    get
+    set
+  }
+  public init()
+  @objc deinit
+  public func check()
 }
 public struct PickListValueTranslationDto : ObjectMapper.Mappable {
   public var _id: Swift.String?
@@ -996,7 +1019,9 @@ extension CovantexSDK.PatientDto {
     get
   }
 }
-public struct ResellerDto : ObjectMapper.Mappable {
+public struct ResellerDto : ObjectMapper.Mappable, Swift.Equatable, Swift.Hashable {
+  public static func == (left: CovantexSDK.ResellerDto, right: CovantexSDK.ResellerDto) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var address: CovantexSDK.AddressDto?
   public var alternativeNumber: Swift.String?
   public var caregiversTermsAndConditionsId: Swift.String?
@@ -1058,6 +1083,9 @@ public struct ResellerDto : ObjectMapper.Mappable {
     public var rawValue: Swift.String {
       get
     }
+  }
+  public var hashValue: Swift.Int {
+    get
   }
 }
 public struct SignInDto : Swift.Codable, ObjectMapper.Mappable {
@@ -1131,26 +1159,31 @@ public struct ResellerServiceDto : ObjectMapper.Mappable {
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
   public enum ServiceTypeId : Swift.String {
-    case NonEmergent
-    case MentalHealth
-    case Dietary
-    case Lab
-    case DME
-    case CGX
-    case PGX
-    case SpecialtyRx
-    case ED
-    case GSID
     case Allergy
-    case HRT
-    case CompoundRx
     case CarrierID
-    case Ortele
+    case CGX
+    case CompoundRx
+    case Dietary
+    case DME
+    case ED
+    case FunctionalMedicine
+    case GSID
+    case HRT
     case Imaging
-    case PhysicalTherapy
-    case SickLeave
-    case Referral
+    case Lab
+    case MentalHealth
     case Monitoring
+    case NonEmergent
+    case OneTimeConsultation
+    case Ortele
+    case PGX
+    case PhysicalTherapy
+    case PreSurgical
+    case Referral
+    case SickLeave
+    case SpecialtyRx
+    case StemCell
+    case WeightLoss
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1402,26 +1435,31 @@ public struct CaregiverResellerServiceDto : ObjectMapper.Mappable, Swift.Codable
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
   public enum ResellerServiceType : Swift.String, Swift.Codable {
-    case NonEmergent
-    case MentalHealth
-    case Dietary
-    case Lab
-    case DME
-    case CGX
-    case PGX
-    case SpecialtyRx
-    case ED
-    case GSID
     case Allergy
-    case HRT
-    case CompoundRx
     case CarrierID
-    case Ortele
+    case CGX
+    case CompoundRx
+    case Dietary
+    case DME
+    case ED
+    case FunctionalMedicine
+    case GSID
+    case HRT
     case Imaging
-    case PhysicalTherapy
-    case SickLeave
-    case Referral
+    case Lab
+    case MentalHealth
     case Monitoring
+    case NonEmergent
+    case OneTimeConsultation
+    case Ortele
+    case PGX
+    case PhysicalTherapy
+    case PreSurgical
+    case Referral
+    case SickLeave
+    case SpecialtyRx
+    case StemCell
+    case WeightLoss
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1805,6 +1843,9 @@ extension CovantexSDK.RegistrationPatientDto {
     get
   }
 }
+extension CovantexSDK.RegistrationPatientDto {
+  public mutating func updateSecurityQuestionsDefault()
+}
 public struct AccessCodeDto : ObjectMapper.Mappable {
   public var accessCodeId: Swift.String?
   public var clientId: Swift.String?
@@ -1957,10 +1998,10 @@ public class EnvironmentFlagsDto : ObjectMapper.Mappable, Swift.Codable {
   required public init?(map: ObjectMapper.Map)
   public func mapping(map: ObjectMapper.Map)
   public enum PatientLoginType : Swift.String, Swift.Codable {
-    case ByLoginAndPassword
-    case ByOneTimePassword
-    case ByUserId
-    case ByLoginToken
+    case byLoginAndPassword
+    case byOneTimePassword
+    case byUserId
+    case byLoginToken
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1968,9 +2009,9 @@ public class EnvironmentFlagsDto : ObjectMapper.Mappable, Swift.Codable {
     }
   }
   public enum OneTimePasswordSendingType : Swift.String, Swift.Codable {
-    case Email
-    case Sms
-    case Event
+    case email
+    case sms
+    case event
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1978,8 +2019,8 @@ public class EnvironmentFlagsDto : ObjectMapper.Mappable, Swift.Codable {
     }
   }
   public enum PersonIdType : Swift.String, Swift.Codable {
-    case SSN
-    case IIN
+    case ssn
+    case iin
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1987,10 +2028,7 @@ public class EnvironmentFlagsDto : ObjectMapper.Mappable, Swift.Codable {
     }
   }
   public enum UsedPaymentSystem : Swift.String, Swift.Codable {
-    case authorizeNet
-    case blueSnap
     case xendit
-    case ePay
     case xenditInvoice
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
@@ -2105,7 +2143,9 @@ public struct SecurityQuestionsAnswerDto : ObjectMapper.Mappable {
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
 }
-public struct EncounterDto : ObjectMapper.Mappable {
+public struct EncounterDto : ObjectMapper.Mappable, Swift.Equatable, Swift.Hashable {
+  public static func == (left: CovantexSDK.EncounterDto, right: CovantexSDK.EncounterDto) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var acceptedById: Swift.String?
   public var acceptedOn: Foundation.Date?
   public var accessCode: Swift.String?
@@ -2433,6 +2473,9 @@ public struct EncounterDto : ObjectMapper.Mappable {
     public var rawValue: Swift.String {
       get
     }
+  }
+  public var hashValue: Swift.Int {
+    get
   }
 }
 public struct AllergyDto : ObjectMapper.Mappable, Swift.Codable {
@@ -3120,13 +3163,15 @@ public struct EncounterTreatmentPlanDto : ObjectMapper.Mappable {
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
 }
-public struct EncounterAssessmentDto : ObjectMapper.Mappable {
+public struct EncounterAssessmentDto : ObjectMapper.Mappable, Swift.Codable {
   public var assessmentId: Swift.String?
   public var encounterId: Swift.String?
   public var text: Swift.String?
   public var timestamp: Foundation.Date?
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PatientOfflineServiceDto : ObjectMapper.Mappable {
   public var offlineServiceId: Swift.String?
@@ -3493,6 +3538,7 @@ public struct MhdDto : ObjectMapper.Mappable, Swift.Codable {
   public func getArrMhdDtoMedicalHistory() -> [CovantexSDK.MhdDtoMedicalHistory]
   public mutating func getMhdDtoMedicalHistory(arrMhdDtoMedicalHistory: [CovantexSDK.MhdDtoMedicalHistory]) -> CovantexSDK.MhdDto
   public mutating func updateMhdDtoMedicalHistory(arrMhdDtoMedicalHistory: [CovantexSDK.MhdDtoMedicalHistory]) -> CovantexSDK.MhdDto
+  public mutating func updateMhdDtoDefault()
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -3959,7 +4005,7 @@ public struct DictionaryModel : ObjectMapper.Mappable {
 }
 @_hasMissingDesignatedInitializers public class PaymentDialog {
   public static let shared: CovantexSDK.PaymentDialog
-  public func initPaymentAuthorization(usingPatientId patientId: Swift.String, payableAmount: Swift.Double, paymentMethodId: Swift.String = "", paymentSystem: CovantexSDK.EnvironmentFlagsDto.UsedPaymentSystem, presentUIonController: UIKit.UIViewController, updateLoaderStatus: @escaping (_ isShowLoader: Swift.Bool) -> Swift.Void, onSuccess: @escaping (_ paymentAuthorizationDto: CovantexSDK.PaymentAuthorizationDto, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ message: Swift.String) -> Swift.Void)
+  public func initPaymentAuthorization(usingPatientId patientId: Swift.String, payableAmount: Swift.Double, paymentMethodId: Swift.String = "", paymentSystem: CovantexSDK.ApplicationDto.ePaymentSystem, presentUIonController: UIKit.UIViewController, updateLoaderStatus: @escaping (_ isShowLoader: Swift.Bool) -> Swift.Void, onSuccess: @escaping (_ paymentAuthorizationDto: CovantexSDK.PaymentAuthorizationDto, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ message: Swift.String) -> Swift.Void)
   @objc deinit
 }
 public struct VendorMedicalItemDto : ObjectMapper.Mappable {
@@ -4616,7 +4662,7 @@ extension Swift.String {
   public func addUserProfileFile(fileContentType: Swift.String, fileId: Swift.String, userId: Swift.String, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.UserProfileFileDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func updateUserProfileFile(userProfileFileId: Swift.String, body: CovantexSDK.UserProfileFileDto, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.UserProfileFileDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func deleteUserProfileFile(userProfileFileId: Swift.String, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.UserProfileFileDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
-  public func getCaregiverWorkWindows(caregiverId: Swift.String, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.CaregiverWorkWindowDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
+  public func getCaregiverWorkWindows(_ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.CaregiverWorkWindowDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func addCaregiverWorkWindow(body: CovantexSDK.CaregiverWorkWindowDto, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.CaregiverWorkWindowDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func updateCaregiverWorkWindow(caregiverWorkWindowId: Swift.String, body: CovantexSDK.CaregiverWorkWindowDto, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.CaregiverWorkWindowDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func deleteCaregiverWorkWindow(caregiverWorkWindowId: Swift.String, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.CaregiverWorkWindowDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
@@ -4635,10 +4681,12 @@ extension Swift.String {
   public func getTreatmentPlan(treatmentPlanId: Swift.String, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.EncounterTreatmentPlanDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func updateTreatmentPlan(treatmentPlanId: Swift.String, body: CovantexSDK.EncounterTreatmentPlanDto, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.EncounterTreatmentPlanDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func addTreatmentPlan(encounterId: Swift.String, body: CovantexSDK.EncounterTreatmentPlanDto, _ apiQuery: CovantexSDK.ApiQuery? = nil, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.EncounterTreatmentPlanDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
+  public func getHappiTravelSSOUrl(apiKey: Swift.String, email: Swift.String, onSuccess: @escaping ((_ response: Foundation.NSDictionary) -> Swift.Void), onFailure: CovantexSDK.onFailureHandler? = nil)
   @objc override dynamic public init()
   @objc deinit
 }
 public class APISettings : Swift.Codable, ObjectMapper.Mappable {
+  public var log: CovantexSDK.APISettings.APILogLevel
   public var mode: CovantexSDK.APISettings.APIEnvironmentType
   public var mainServiceApiKey: Swift.String
   public var mainServiceBaseUrl: Swift.String
@@ -4665,6 +4713,17 @@ public class APISettings : Swift.Codable, ObjectMapper.Mappable {
     public var rawValue: Swift.String {
       get
     }
+  }
+  public enum APILogLevel : Swift.String, Swift.Codable {
+    case off
+    case info
+    case debug
+    case custom
+    public var rawValue: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
   }
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -4982,22 +5041,31 @@ public struct PaymentAuthorizationDto : ObjectMapper.Mappable {
   }
 }
 public struct ApplicationDto : ObjectMapper.Mappable, Swift.Codable {
+  public var allowedCancelledReassignedRescheduledBeforeStartConsultHours: Swift.Int?
   public var apiKey: Swift.String?
-  public var applicationId: Swift.String?
   public var applicationName: Swift.String?
-  public var allowedSetStatusCancelledReassignedRescheduledBeforeStartConsultHours: Swift.Int?
-  public var blueSnapPublicKey: Swift.String?
-  public var blueSnapScriptUrl: Swift.String?
+  public var audioIsEnabled: Swift.Bool?
+  public var authenticationAppName: Swift.String?
+  public var authenticationImageHeight: Swift.Int?
+  public var authenticationImageWidth: Swift.Int?
+  public var awsFileTimeLinkMinutes: Swift.Int?
   public var branding: CovantexSDK.BrandingDto?
   public var callUrl: Swift.String?
+  public var chiefComplaintLabOrderResultEncounter: Swift.String?
+  public var communicationReportTimePeriodDays: Swift.Int?
   public var conferenceUrl: Swift.String?
+  public var connectWellUrl: Swift.String?
   public var createdDate: Foundation.Date?
+  public var dashboardType: CovantexSDK.ApplicationDto.eDashboardType?
   public var dashboardUrl: Swift.String?
+  public var daysAfterFailedPaymentNotificationSent: Swift.Int?
   public var defaultAccessCode: Swift.String?
   public var defaultCountry: CovantexSDK.DefaultCountryDto?
   public var defaultLanguage: Swift.String?
-  public var enabledTwilio: Swift.Bool?
   public var eligibilityUrl: Swift.String?
+  public var enabledTwilio: Swift.Bool?
+  public var encounterRefillsMaxCount: Swift.Int?
+  public var encounterRefillsMinDaysInterval: Swift.Int?
   public var environment: Swift.String?
   public var facebookClientId: Swift.String?
   public var facebookRedirectUrl: Swift.String?
@@ -5005,53 +5073,73 @@ public struct ApplicationDto : ObjectMapper.Mappable, Swift.Codable {
   public var googleRedirectUrl: Swift.String?
   public var isomorphicConfig: CovantexSDK.IsomorphicConfigDto?
   public var lastUpdatedDate: Foundation.Date?
+  public var loginTokenTimeMinute: Swift.Int?
   public var mainApiUrl: Swift.String?
+  public var maxSessionLifeTimeHours: Swift.Int?
   public var medicalItemsUrl: Swift.String?
+  public var messageConsultAppointed: Swift.String?
+  public var messageConsultCreated: Swift.String?
+  public var messageEncounterScheduledReminder: Swift.String?
   public var metricMeasurementSystem: CovantexSDK.MetricMeasurementSystemDto?
-  public var oneTimePasswordSendingType: CovantexSDK.ApplicationDto.OneTimePasswordSendingType?
+  public var oneTimePasswordSendingType: CovantexSDK.ApplicationDto.eDeliveryType?
   public var packageId: Swift.String?
-  public var patientLoginType: CovantexSDK.ApplicationDto.PatientLoginType?
-  public var pcpUrl: Swift.String?
-  public var plans: [CovantexSDK.ApplicationPlanDto]?
+  public var patientCanHaveOneActiveExpressOrder: Swift.Bool?
+  public var patientLoginType: CovantexSDK.ApplicationDto.eLoginMethod?
+  public var paymentAuthorizationAmountOverride: Swift.Double?
   public var paymentCurrency: Swift.String?
   public var paymentCurrencySymbol: Swift.String?
-  public var registrationType: CovantexSDK.ApplicationDto.eRegistrationType?
+  public var paymentsCancelledEncountersPatientNoShowBeforeScheduledHours: Swift.Int?
+  public var paymentSystem: CovantexSDK.ApplicationDto.ePaymentSystem?
+  public var pcpUrl: Swift.String?
+  public var personIdType: CovantexSDK.ApplicationDto.ePersonIdType?
+  public var pharmacyStorageType: CovantexSDK.ApplicationDto.ePharmacyStorageType?
+  public var preRegistrationVerificationRequired: Swift.Bool?
+  public var processPaymentsForCancelledEncountersIfPatientNoShow: Swift.Bool?
   public var regionalSpecificSettings: CovantexSDK.RegionalSpecificSettingsDto?
+  public var registrationType: CovantexSDK.ApplicationDto.eRegistrationType?
+  public var requiredCPTCodeForEncounter: Swift.String?
   public var rxHistoryUrl: Swift.String?
-  public var status: CovantexSDK.ApplicationDto.applicationStatus?
-  public var stringsUrl: Swift.String?
+  public var sendOrderWithoutReview: Swift.Bool?
   public var serverHubUrl: Swift.String?
   public var showDynamicMhd: Swift.Bool?
   public var showDynamicVitals: Swift.Bool?
   public var showFamilyMembers: Swift.Bool?
   public var showMemberResheduleConsult: Swift.Bool?
   public var showSocialNetworkBtn: Swift.Bool?
-  public var simpleRegistration: Swift.Bool?
+  public var smsCommunicationProvider: CovantexSDK.ApplicationDto.eCommunicationProviderType?
+  public var smsEnabled: Swift.Bool?
   public var smsRegistrationRequired: Swift.Bool?
+  public var status: CovantexSDK.ApplicationDto.eApplicationStatus?
   public var snsConfig: CovantexSDK.SnsConfigDto?
   public var toolUrl: Swift.String?
-  public var usedPaymentSystem: CovantexSDK.ApplicationDto.UsedPaymentSystem?
+  public var useMdToolBox: Swift.Bool?
+  public var videoCommunicationProvider: CovantexSDK.ApplicationDto.eCommunicationProviderType?
   public var visibilityMaternalProgram: Swift.Bool?
   public var visibilityMenuItemPackagesForPatient: Swift.Bool?
+  public var voiceCommunicationProvider: CovantexSDK.ApplicationDto.eCommunicationProviderType?
+  public var waitingForOneTimePasswordTimeoutMin: Swift.Int?
   public var xenditPublicApiKey: Swift.String?
+  public var zegoAppId: Swift.String?
+  public var zegoAppSign: Swift.String?
+  public var zegoUrl: Swift.String?
   public var zipCodesUrl: Swift.String?
   public init?(map: ObjectMapper.Map)
   public mutating func mapping(map: ObjectMapper.Map)
-  public enum PatientLoginType : Swift.String, Swift.Codable {
-    case ByLoginAndPassword
-    case ByOneTimePassword
-    case ByUserId
-    case ByLoginToken
+  public enum eLoginMethod : Swift.String, Swift.Codable {
+    case byLoginAndPassword
+    case byOneTimePassword
+    case byUserId
+    case byLoginToken
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
   }
-  public enum OneTimePasswordSendingType : Swift.String, Swift.Codable {
-    case Email
-    case Sms
-    case Event
+  public enum eDeliveryType : Swift.String, Swift.Codable {
+    case email
+    case sms
+    case event
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -5061,13 +5149,14 @@ public struct ApplicationDto : ObjectMapper.Mappable, Swift.Codable {
   public enum eRegistrationType : Swift.String, Swift.Codable {
     case full
     case simple
+    case regular
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
   }
-  public enum applicationStatus : Swift.String, Swift.Codable {
+  public enum eApplicationStatus : Swift.String, Swift.Codable {
     case active
     case inactive
     public init?(rawValue: Swift.String)
@@ -5076,12 +5165,47 @@ public struct ApplicationDto : ObjectMapper.Mappable, Swift.Codable {
       get
     }
   }
-  public enum UsedPaymentSystem : Swift.String, Swift.Codable {
-    case authorizeNet
-    case blueSnap
-    case ePay
+  public enum ePaymentSystem : Swift.String, Swift.Codable {
     case xendit
     case xenditInvoice
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ePersonIdType : Swift.String, Swift.Codable {
+    case ssn
+    case iin
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ePharmacyStorageType : Swift.String, Swift.Codable {
+    case mdToolBox
+    case establishmentLocation
+    case localStorage
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum eDashboardType : Swift.String, Swift.Codable {
+    case legacyDashboard
+    case choicePlanDashboard
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum eCommunicationProviderType : Swift.String, Swift.Codable {
+    case twilio
+    case zoom
+    case zego
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -5265,6 +5389,7 @@ extension CovantexSDK.MainService {
   public func getTerms(forCaregiver caregiverId: Swift.String, completion: @escaping (_ arrTermsAndConditionsCaregiverDto: [CovantexSDK.TermsAndConditionsCaregiverDto], _ errorMessage: Swift.String?) -> Swift.Void)
 }
 extension CovantexSDK.MainService {
+  public func signTerms(forCareGiver caregiverId: Swift.String, statementId: Swift.String, onSuccess: @escaping CovantexSDK.onSuccessHandler<CovantexSDK.ResponseDto<CovantexSDK.TermsAndConditionsCaregiverDto>>, onFailure: CovantexSDK.onFailureHandler? = nil)
   public func signTerms(patientId: Swift.String, planId: Swift.String, completion: @escaping (_ patientDto: CovantexSDK.RegistrationPatientDto?, _ errorMessage: Swift.String?) -> Swift.Void)
   public func signTerms(patient: CovantexSDK.RegistrationPatientDto, planId: Swift.String, completion: @escaping (_ patientDto: CovantexSDK.RegistrationPatientDto?, _ errorMessage: Swift.String?) -> Swift.Void)
   public func signTerms(patientId: Swift.String, planId: Swift.String, completion: @escaping (_ patientDto: CovantexSDK.PatientDto?, _ errorMessage: Swift.String?) -> Swift.Void)
@@ -5349,7 +5474,7 @@ public struct UserProfileFileDto : ObjectMapper.Mappable, Swift.Equatable, Swift
   }
 }
 @_hasMissingDesignatedInitializers public class API {
-  public static func initialize(env: CovantexSDK.APISettings.APIEnvironmentType, mainServiceApiKey: Swift.String, mainServiceBaseUrl: Swift.String, logLevel: CovantexSDK.API.APILogLevel = .off, log: ((_ log: Swift.String) -> Swift.Void)? = nil, sessionExpired: ((_ response: CovantexSDK.ResponseDto<CovantexSDK.SessionDto>) -> Swift.Void)? = nil, timeout: (() -> Swift.Void)? = nil, isMaintenanceRunning: ((_ isMaintenanceRunning: Swift.Bool, _ resource: CovantexSDK.Resource?, _ errorIfAny: (any Swift.Error)?) -> Swift.Void)? = nil, onInternetChange: ((_ connection: CovantexSDK.InternetReachability.Connection) -> Swift.Void)? = nil)
+  public static func initialize(env: CovantexSDK.APISettings.APIEnvironmentType, mainServiceApiKey: Swift.String, mainServiceBaseUrl: Swift.String, logLevel: CovantexSDK.APISettings.APILogLevel = .off, log: ((_ log: Swift.String) -> Swift.Void)? = nil, sessionExpired: ((_ response: CovantexSDK.ResponseDto<CovantexSDK.SessionDto>) -> Swift.Void)? = nil, timeout: (() -> Swift.Void)? = nil, isMaintenanceRunning: ((_ isMaintenanceRunning: Swift.Bool, _ resource: CovantexSDK.Resource?, _ errorIfAny: (any Swift.Error)?) -> Swift.Void)? = nil, onInternetChange: ((_ connection: CovantexSDK.InternetReachability.Connection) -> Swift.Void)? = nil)
   public static let version: Swift.String
   public static let stringsService: CovantexSDK.StringsService
   public static let mainService: CovantexSDK.MainService
@@ -5375,20 +5500,8 @@ extension CovantexSDK.API {
   public static func timeout(_ completion: @escaping (() -> Swift.Void))
   public static func isMaintenanceRunning(_ completion: @escaping ((_ isMaintenanceRunning: Swift.Bool, _ resource: CovantexSDK.Resource?, _ errorIfAny: (any Swift.Error)?) -> Swift.Void))
   public static func getAPILog(_ log: @escaping ((_ log: Swift.String) -> Swift.Void))
-  public enum APILogLevel : Swift.Codable {
-    case off
-    case info
-    case debug
-    public static func == (a: CovantexSDK.API.APILogLevel, b: CovantexSDK.API.APILogLevel) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public func encode(to encoder: any Swift.Encoder) throws
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public static func setLogLevel(_ logLevel: CovantexSDK.API.APILogLevel)
-  public static var logLevel: CovantexSDK.API.APILogLevel {
+  public static func setLogLevel(_ logLevel: CovantexSDK.APISettings.APILogLevel)
+  public static var logLevel: CovantexSDK.APISettings.APILogLevel {
     get
   }
   public static func updateSession(session: CovantexSDK.MainServiceSession)
@@ -6028,6 +6141,9 @@ extension CovantexSDK.MainService.baseUrl : Swift.Hashable {}
 extension CovantexSDK.APISettings.APIEnvironmentType : Swift.Equatable {}
 extension CovantexSDK.APISettings.APIEnvironmentType : Swift.Hashable {}
 extension CovantexSDK.APISettings.APIEnvironmentType : Swift.RawRepresentable {}
+extension CovantexSDK.APISettings.APILogLevel : Swift.Equatable {}
+extension CovantexSDK.APISettings.APILogLevel : Swift.Hashable {}
+extension CovantexSDK.APISettings.APILogLevel : Swift.RawRepresentable {}
 extension CovantexSDK.PatientInsuranceCompanyDto.InsuranceCompanyRoleId : Swift.Equatable {}
 extension CovantexSDK.PatientInsuranceCompanyDto.InsuranceCompanyRoleId : Swift.Hashable {}
 extension CovantexSDK.PatientInsuranceCompanyDto.InsuranceCompanyRoleId : Swift.RawRepresentable {}
@@ -6050,21 +6166,33 @@ extension CovantexSDK.XenditTokenDto.Status : Swift.RawRepresentable {}
 extension CovantexSDK.PaymentAuthorizationDto.PaymentAuthorizationStatusId : Swift.Equatable {}
 extension CovantexSDK.PaymentAuthorizationDto.PaymentAuthorizationStatusId : Swift.Hashable {}
 extension CovantexSDK.PaymentAuthorizationDto.PaymentAuthorizationStatusId : Swift.RawRepresentable {}
-extension CovantexSDK.ApplicationDto.PatientLoginType : Swift.Equatable {}
-extension CovantexSDK.ApplicationDto.PatientLoginType : Swift.Hashable {}
-extension CovantexSDK.ApplicationDto.PatientLoginType : Swift.RawRepresentable {}
-extension CovantexSDK.ApplicationDto.OneTimePasswordSendingType : Swift.Equatable {}
-extension CovantexSDK.ApplicationDto.OneTimePasswordSendingType : Swift.Hashable {}
-extension CovantexSDK.ApplicationDto.OneTimePasswordSendingType : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.eLoginMethod : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.eLoginMethod : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.eLoginMethod : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.eDeliveryType : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.eDeliveryType : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.eDeliveryType : Swift.RawRepresentable {}
 extension CovantexSDK.ApplicationDto.eRegistrationType : Swift.Equatable {}
 extension CovantexSDK.ApplicationDto.eRegistrationType : Swift.Hashable {}
 extension CovantexSDK.ApplicationDto.eRegistrationType : Swift.RawRepresentable {}
-extension CovantexSDK.ApplicationDto.applicationStatus : Swift.Equatable {}
-extension CovantexSDK.ApplicationDto.applicationStatus : Swift.Hashable {}
-extension CovantexSDK.ApplicationDto.applicationStatus : Swift.RawRepresentable {}
-extension CovantexSDK.ApplicationDto.UsedPaymentSystem : Swift.Equatable {}
-extension CovantexSDK.ApplicationDto.UsedPaymentSystem : Swift.Hashable {}
-extension CovantexSDK.ApplicationDto.UsedPaymentSystem : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.eApplicationStatus : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.eApplicationStatus : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.eApplicationStatus : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.ePaymentSystem : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.ePaymentSystem : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.ePaymentSystem : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.ePersonIdType : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.ePersonIdType : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.ePersonIdType : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.ePharmacyStorageType : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.ePharmacyStorageType : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.ePharmacyStorageType : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.eDashboardType : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.eDashboardType : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.eDashboardType : Swift.RawRepresentable {}
+extension CovantexSDK.ApplicationDto.eCommunicationProviderType : Swift.Equatable {}
+extension CovantexSDK.ApplicationDto.eCommunicationProviderType : Swift.Hashable {}
+extension CovantexSDK.ApplicationDto.eCommunicationProviderType : Swift.RawRepresentable {}
 extension CovantexSDK.ApplicationDto.eAuthenticationType : Swift.Equatable {}
 extension CovantexSDK.ApplicationDto.eAuthenticationType : Swift.Hashable {}
 extension CovantexSDK.PreregistrationVerificationDto.AppProvider : Swift.Equatable {}
@@ -6088,8 +6216,6 @@ extension CovantexSDK.UserProfileFileDto.FileStoragePlace : Swift.RawRepresentab
 extension CovantexSDK.UserProfileFileDto.FileType : Swift.Equatable {}
 extension CovantexSDK.UserProfileFileDto.FileType : Swift.Hashable {}
 extension CovantexSDK.UserProfileFileDto.FileType : Swift.RawRepresentable {}
-extension CovantexSDK.API.APILogLevel : Swift.Equatable {}
-extension CovantexSDK.API.APILogLevel : Swift.Hashable {}
 extension CovantexSDK.EncounterFileDto.FileStoragePlace : Swift.Equatable {}
 extension CovantexSDK.EncounterFileDto.FileStoragePlace : Swift.Hashable {}
 extension CovantexSDK.EncounterFileDto.FileStoragePlace : Swift.RawRepresentable {}
