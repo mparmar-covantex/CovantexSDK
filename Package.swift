@@ -11,7 +11,7 @@ let package = Package(
 	products: [
 		.library(
 			name: "CovantexSDK",
-			type: .static,
+			//type: .static,
 			targets: ["CovantexSDK", "CovantexFrameworkWrapper"])
 	],
 	dependencies: [
