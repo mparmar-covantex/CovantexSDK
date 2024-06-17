@@ -299,6 +299,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+
 /// MainService class : We can get all mainservice APIs like, Sessions, EnvironmentFlags, Enums, UserDevices, Registrations, Patients, PaymentAuthorizations, Encounters, etc.
 SWIFT_CLASS("_TtC11CovantexSDK11MainService")
 @interface MainService : NSObject

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		JqBkZOU1V1PumTneaZfHxM9DkZk=
+		h3smBKIx218mL/oiMcq+mplFwWA=
 		</data>
 		<key>Resources/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Resources/Payment.storyboardc/AppWebView.nib</key>
 		<data>
-		gygWeqYc7bVx9/Ow0itMStilHFA=
+		iIDOCK3jhUkIDNnfP2yctNK/asI=
 		</data>
 		<key>Resources/Payment.storyboardc/Info.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Resources/Payment.storyboardc/UINavigationController-1Fa-Ea-cAz.nib</key>
 		<data>
-		ySONVdOzCM8ujIxIow4FJEXSRec=
+		1sqrXx/ZrHnQO6gBLJOJJsQqx58=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -31,84 +31,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ndUPdvvqFpUHMGEJErZinlUzYr4rjHhNHu7rkCRBdEE=
+			ur+wgzxS3mSdYq8eezu08aGil9EVoF5TLP2930WVUdw=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jh2irpOxPqyIwaaBVFwFkHCbdA1nPRtRBGcnEWP4kss=
+			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gDXlJZeCtNAvzjaUi3ii86GallFerl82zwPemzfKVMk=
+			5/CjZXPYgrHHXo9By41UL+Xt9nwAjPhKcyiHr3CVMXg=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Od6S6stiztG+HEgKhmmXQrFXdWIfbJG1FamZtPbN6e0=
+			wwQAN78Ix8wAdJAVjgQVnPv8yGBSPAQCpIRhNxft1gI=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gDXlJZeCtNAvzjaUi3ii86GallFerl82zwPemzfKVMk=
+			5/CjZXPYgrHHXo9By41UL+Xt9nwAjPhKcyiHr3CVMXg=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8q6JT85lC/VjgdlZGBPpS7zDchCG3V8hokYKUfICP60=
+			r4YMnqR0aP5aJT+uedfDlbbAJnXIKp3KfQRfv3GK2wA=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jh2irpOxPqyIwaaBVFwFkHCbdA1nPRtRBGcnEWP4kss=
+			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mgAqs8TUZSLz/2XA9jSHNChMQ60K8wedJtdZgR1+nQ=
+			01N+AZP/k5q6J/G1FpWOxUbXRgmcTfsIBAxY8ztDE+w=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Qppyt85l+GSr/nDzX1zoX5FDeigE8QywcCJURhkCt4=
+			iZE0AcGXX92+8GrzzGOGNsD5R/AvtOUW7lUJu+fpkNY=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mgAqs8TUZSLz/2XA9jSHNChMQ60K8wedJtdZgR1+nQ=
+			01N+AZP/k5q6J/G1FpWOxUbXRgmcTfsIBAxY8ztDE+w=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZeMkw7uVZAEDeOPfs0gy2p2kAKTIceagD1ZRRUVszPk=
+			nmiQiilDhO0gLMr/0s3yfKixO+sUSSxtmeNmb8DeDDI=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hbI5oVmcBwp48PNjJOHtGLOmudofyhR6pDGkNpnqs+M=
+			aT6T2oHKqhMX5S1akRyH0BQqMKtAWYKmRNjXH/m6f2c=
 			</data>
 		</dict>
 		<key>Resources/Payment.storyboardc/9zd-Lu-nd2-view-Ybu-NW-WcO.nib</key>
@@ -122,7 +122,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BiwXLkyvuRiwHH4C8XAKIV+CmtoGfK5u5j0ycwu3LS8=
+			4k7NXqyzl89hq/YGQIHrcdRBo2UgUKB9tt95wDSieVY=
 			</data>
 		</dict>
 		<key>Resources/Payment.storyboardc/Info.plist</key>
@@ -136,7 +136,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5jhDY6+c2+pvaF+YhrMc6KJnYiL2QECX9zwgD+cxIA=
+			qu5XjhkNthaoZwrEaYPpQ6CzTrUN+fMax4wX9R6ijk0=
 			</data>
 		</dict>
 	</dict>
