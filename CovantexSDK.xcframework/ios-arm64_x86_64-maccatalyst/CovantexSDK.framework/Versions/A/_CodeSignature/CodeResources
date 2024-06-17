@@ -38,7 +38,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
+			HIHDH7mV5HBoKwy+V4L1s/8cl7pIPaGD0dObkBLPjYE=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
@@ -66,14 +66,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r4YMnqR0aP5aJT+uedfDlbbAJnXIKp3KfQRfv3GK2wA=
+			o5ilb7DpvdQvXj21WaHaI+NnFyfleOLm1hGUh2UECUk=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sdM5DXdIV7vckcaTKPVlmRdNbSGDQ5xzwyv/B9L9dGw=
+			HIHDH7mV5HBoKwy+V4L1s/8cl7pIPaGD0dObkBLPjYE=
 			</data>
 		</dict>
 		<key>Modules/CovantexSDK.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
@@ -101,7 +101,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nmiQiilDhO0gLMr/0s3yfKixO+sUSSxtmeNmb8DeDDI=
+			edFD7n54S3hMIOg3mBuO/gW21Q0k7SGU+a0gscilscI=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
